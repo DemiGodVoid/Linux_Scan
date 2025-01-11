@@ -174,16 +174,15 @@ def check_disk_health(log_widget):
         log_message(log_widget, "smartctl not found. Install it with: sudo apt install smartmontools")
 
 
-
 def main():
     """Main function to run the diagnostic tests."""
     # Create the GUI window
     root = tk.Tk()
-    root.title("Linux System Scanner v1.0")
+    root.title("Linux System Scanner v2")
     root.geometry("800x600")
 
-    # Create a scrollable text widget
-    log_widget = ScrolledText(root, wrap=tk.WORD, width=100, height=30)
+    # Create a scrollable text widget with black background and red text
+    log_widget = ScrolledText(root, wrap=tk.WORD, width=100, height=30, bg='black', fg='red')
     log_widget.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
     log_message(log_widget, "Linux System Scanner v1.0\n")
